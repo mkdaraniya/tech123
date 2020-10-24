@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\Update\Queue;
 
-class JobUpdateTest extends \PHPUnit\Framework\TestCase
+class JobUpdateTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject|\Magento\Update\Status
@@ -24,15 +24,11 @@ class JobUpdateTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->status = $this->getMockBuilder('Magento\Update\Status')
-            ->disableOriginalConstructor()
-            ->getMock();
-        $this->composerApp = $this->getMockBuilder('Magento\Composer\MagentoComposerApplication')
-            ->disableOriginalConstructor()
-            ->getMock();
-        $this->queue = $this->getMockBuilder('Magento\Update\Queue')
-            ->disableOriginalConstructor()
-            ->getMock();
+
+        $this->status = $this->getMock('Magento\Update\Status', [], [], '', false);
+        $this->composerApp = $this->getMock('Magento\Composer\MagentoComposerApplication', [], [], '', false);
+        $this->queue = $this->getMock('Magento\Update\Queue', [], [], '', false);
+
     }
 
     public function testExecute()

@@ -1,0 +1,49 @@
+title:MAGMI by dweeves - version:0.7.24-git
+startup:Running Magmi Product Import Engine v1.10 by dweeves
+startup:Import Profile:default
+startup:Import Mode:create
+step:step:0.5%
+startup:Attributeset update is enabled.
+title:MAGMI by dweeves - version:0.7.24-git
+startup:Import Profile:default
+startup:Import Mode:create
+step:step:0.5%
+startup:Attributeset update is enabled.
+info:Initialized attribute_set_infos!
+plugin;Magmi_CSVDataSource;pluginhello:CSV Datasource-1.3.1-Dweeves- 
+plugin;AttributeSetImporter;pluginhello:Attribute Set Importer-0.0.2-5byfive GmbH-http://wiki.magmi.org/index.php?title=Attribute_set_importer 
+plugin;Magmi_DefaultAttributeItemProcessor;pluginhello:Standard Attribute Import-1.1-Dweeves- 
+plugin;Magmi_CSVDataSource;startup:CSV Datasource v1.3.1 - Fetching CSV: http://146.255.61.187/dev/product.csv
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Attribute Set Importer started...
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Fetching 5B5ATI: http://146.255.61.187/dev/attribute1.csv
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Importing CSV : /var/www/html/magmi/magmi/plugins/5b5/general/attributesetimport/downloads/attribute1.csv using separator [ , ] enclosing [ " ]
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - No BOM detected, assuming File is UTF8 without BOM...
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - 6 CSV headers columns found
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Will update attributes...(1 records given)
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Fetched 69 existing attributes.
+plugin;AttributeSetImporter;info:Attribute Set Importer v0.0.2 - Insert & Update loop processed 1/1 records.
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Finished updating attributes: Deleted: 0, Updated: 0, Doubled: 0, Nothing to update: 1, Inserted: 0, Pruned: 0, Kept: 0
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Fetching 5B5ASI: http://146.255.61.187/dev/attributeset.csv
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Importing CSV : /var/www/html/magmi/magmi/plugins/5b5/general/attributesetimport/downloads/attributeset.csv using separator [ , ] enclosing [ " ]
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - No BOM detected, assuming File is UTF8 without BOM...
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - 2 CSV headers columns found
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Will update attribute sets...(1 records given)
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Fetched 1 existing attribute sets.
+plugin;AttributeSetImporter;warning:Attribute Set Importer v0.0.2 - warning: line 1 , wrong column number : 9 found over 2, line skipped
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Finished updating attribute sets: Deleted: 0, Updated: 0, Doubled: 0, Nothing to update: 0, Inserted: 0, Pruned: 0, Kept: 0
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Groups: Deleted: 0, Updated: 0, Doubled: 0, Nothing to update: 0, Inserted: 0, Pruned: 0, Kept: 0
+plugin;AttributeSetImporter;startup:Attribute Set Importer v0.0.2 - Attribute Set Importer finished after 0.0056290626525879 seconds.
+startup:Performing Datasource Lookup...
+lookup:2:3.6954879760742E-5
+startup:Found 2 records, took 3.6954879760742E-5 sec
+columns:2
+plugin;Magmi_DefaultAttributeItemProcessor;startup:Standard Attribute Import v1.1 - Newly created items will have default values for columns:store,type,status,visibility,page_layout,tax_class_id
+startup:Ajusted processed columns:8
+itime:1 - 5.2928924560547E-5 - 5.2928924560547E-5
+dbtime:0 - 0 - 0 - 0
+itime:2 - 0.0067648887634277 - 0.0066609382629395
+dbtime:5 - 0.0017850399017334 - 0.0017850399017334 - 5
+itime:2 - 0.010513782501221 - 0.0036728382110596
+dbtime:7 - 0.0024473667144775 - 0.00066232681274414 - 2
+info:Skus imported OK:1/1
+end:Import Ended

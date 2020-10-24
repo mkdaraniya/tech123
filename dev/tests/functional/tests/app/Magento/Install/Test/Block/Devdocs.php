@@ -18,7 +18,7 @@ class Devdocs extends Block
      *
      * @var string
      */
-    protected $devdocsTitle = '.page-title';
+    protected $devdocsTitle = '.page-heading';
 
     /**
      * Get Developer Documentation title text.

@@ -3,81 +3,96 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-
 declare(strict_types=1);
 
 namespace Magento\Cms\Model;
 
-use Magento\Cms\Api\GetPageByIdentifierInterface;
+use Magento\Backend\Model\Auth;
 use Magento\Cms\Api\PageRepositoryInterface;
-use Magento\Framework\Exception\CouldNotSaveException;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\TestFramework\Helper\Bootstrap;
 use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\Bootstrap as TestBootstrap;
+use Magento\Framework\Acl\Builder;
 
 /**
- * Test page repo.
+ * Test class for page repository.
  */
 class PageRepositoryTest extends TestCase
 {
     /**
+     * Test subject.
+     *
      * @var PageRepositoryInterface
      */
     private $repo;
 
     /**
-     * @var GetPageByIdentifierInterface
+     * @var Auth
      */
-    private $retriever;
+    private $auth;
 
     /**
+     * @var SearchCriteriaBuilder
+     */
+    private $criteriaBuilder;
+
+    /**
+     * @var Builder
+     */
+    private $aclBuilder;
+
+    /**
+     * Sets up common objects.
+     *
      * @inheritDoc
      */
     protected function setUp()
     {
-        $this->repo = Bootstrap::getObjectManager()->get(PageRepositoryInterface::class);
-        $this->retriever = Bootstrap::getObjectManager()->get(GetPageByIdentifierInterface::class);
+        $this->repo = Bootstrap::getObjectManager()->create(PageRepositoryInterface::class);
+        $this->auth = Bootstrap::getObjectManager()->get(Auth::class);
+        $this->criteriaBuilder = Bootstrap::getObjectManager()->get(SearchCriteriaBuilder::class);
+        $this->aclBuilder = Bootstrap::getObjectManager()->get(Builder::class);
     }
 
     /**
-     * Test that the field is deprecated.
-     *
-     * @throws \Throwable
-     * @magentoDataFixture Magento/Cms/_files/pages_with_layout_xml.php
-     * @return void
+     * @inheritDoc
      */
-    public function testSaveUpdateXml(): void
+    protected function tearDown()
     {
-        $page = $this->retriever->execute('test_custom_layout_page_1', 0);
-        $page->setTitle($page->getTitle() .'TEST');
+        parent::tearDown();
 
-        //Is successfully saved without changes to the custom layout xml.
+        $this->auth->logout();
+    }
+
+    /**
+     * Test authorization when saving page's design settings.
+     *
+     * @magentoDataFixture Magento/Cms/_files/pages.php
+     * @magentoAppArea adminhtml
+     * @magentoDbIsolation enabled
+     * @magentoAppIsolation enabled
+     */
+    public function testSaveDesign()
+    {
+        $pages = $this->repo->getList(
+            $this->criteriaBuilder->addFilter('identifier', 'page_design_blank')->create()
+        )->getItems();
+        $page = array_pop($pages);
+        $this->auth->login(TestBootstrap::ADMIN_NAME, TestBootstrap::ADMIN_PASSWORD);
+
+        //Admin doesn't have access to page's design.
+        $this->aclBuilder->getAcl()->deny(null, 'Magento_Cms::save_design');
+
+        $page->setCustomTheme('test');
         $page = $this->repo->save($page);
+        $this->assertNotEquals('test', $page->getCustomTheme());
 
-        //New value is not accepted.
-        $page->setCustomLayoutUpdateXml('<container name="new_container_for_save_update_xml" />');
-        $forbidden = false;
-        try {
-            $page = $this->repo->save($page);
-        } catch (CouldNotSaveException $exception) {
-            $forbidden = true;
-        }
-        $this->assertTrue($forbidden);
+        //Admin has access to page' design.
+        $this->aclBuilder->getAcl()->allow(null, ['Magento_Cms::save', 'Magento_Cms::save_design']);
 
-        //New value is not accepted.
-        $page->setLayoutUpdateXml('<container name="new_container_for_save_update_xml2" />');
-        $forbidden = false;
-        try {
-            $page = $this->repo->save($page);
-        } catch (CouldNotSaveException $exception) {
-            $forbidden = true;
-        }
-        $this->assertTrue($forbidden);
-
-        //Can be removed
-        $page->setCustomLayoutUpdateXml(null);
-        $page->setLayoutUpdateXml(null);
+        $page->setCustomTheme('test');
         $page = $this->repo->save($page);
-        $this->assertEmpty($page->getCustomLayoutUpdateXml());
-        $this->assertEmpty($page->getLayoutUpdateXml());
+        $this->assertEquals('test', $page->getCustomTheme());
     }
 }
