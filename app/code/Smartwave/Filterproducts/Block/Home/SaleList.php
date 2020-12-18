@@ -66,8 +66,8 @@ class SaleList extends \Magento\Catalog\Block\Product\ListProduct {
                         'gteq' => date('Y-m-d G:i:s', strtotime($now)),
                         'date' => true,
                     ]
-                ])
-                ->addAttributeToFilter('is_saleable', 1, 'left');
+                ]);
+                /*->addAttributeToFilter('is_saleable', 1, 'left');*/
         } else {
             $collection->addMinimalPrice()
                 ->addFinalPrice()
@@ -90,8 +90,8 @@ class SaleList extends \Magento\Catalog\Block\Product\ListProduct {
                         'gteq' => date('Y-m-d G:i:s', strtotime($now)),
                         'date' => true,
                     ]
-                ])
-                ->addAttributeToFilter('is_saleable', 1, 'left');
+                ]);
+                /*->addAttributeToFilter('is_saleable', 1, 'left');*/
         }
         
         $collection->getSelect()
