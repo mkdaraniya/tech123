@@ -1,0 +1,40 @@
+attribute_set_name,attribute_code,attribute_group_name
+*,name,General
+*,description,General
+*,short_description,General
+*,sku,General
+*,weight,General
+*,news_from_date,General
+*,news_to_date,General
+*,status,General
+*,url_key,General
+*,visibility,General
+*,country_of_manufacture,General
+*,price,Prices
+*,group_price,Prices
+*,special_price,Prices
+*,special_from_date,Prices
+*,special_to_date,Prices
+*,tier_price,Prices
+*,msrp_enabled,Prices
+*,msrp_display_actual_price_type,Prices
+*,msrp,Prices
+*,tax_class_id,Prices
+*,price_view,Prices
+*,meta_title,Meta Information
+*,meta_keyword,Meta Information
+*,meta_description,Meta Information
+*,image,Images
+*,small_image,Images
+*,thumbnail,Images
+*,media_gallery,Images
+*,gallery,Images
+*,is_recurring,Recurring Profile
+*,recurring_profile,Recurring Profile
+*,custom_design,Design
+*,custom_design_from,Design
+*,custom_design_to,Design
+*,custom_layout_update,Design
+*,page_layout,Design
+*,options_container,Design
+*,gift_message_available,Gift Options
