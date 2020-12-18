@@ -55,7 +55,7 @@ class BestsellersList extends \Magento\Catalog\Block\Product\ListProduct {
                 ->addAttributeToSelect('thumbnail')
                 ->addAttributeToSelect($this->_catalogConfig->getProductAttributes())
                 ->addUrlRewrite()
-                ->addAttributeToFilter('is_saleable', 1, 'left')
+                /*->addAttributeToFilter('is_saleable', 1, 'left')*/
                 ->addCategoryFilter($category);
         } else {
             $collection->addMinimalPrice()
@@ -66,8 +66,8 @@ class BestsellersList extends \Magento\Catalog\Block\Product\ListProduct {
                 ->addAttributeToSelect('small_image')
                 ->addAttributeToSelect('thumbnail')
                 ->addAttributeToSelect($this->_catalogConfig->getProductAttributes())
-                ->addUrlRewrite()
-                ->addAttributeToFilter('is_saleable', 1, 'left');
+                ->addUrlRewrite();
+                /*->addAttributeToFilter('is_saleable', 1, 'left');*/
         }
         
         $collection->getSelect()

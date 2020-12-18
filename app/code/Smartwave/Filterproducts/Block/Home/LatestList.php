@@ -53,7 +53,7 @@ class LatestList extends \Magento\Catalog\Block\Product\ListProduct {
                 ->addAttributeToSelect('thumbnail')
                 ->addAttributeToSelect($this->_catalogConfig->getProductAttributes())
                 ->addUrlRewrite()
-                ->addAttributeToFilter('is_saleable', 1, 'left')
+                /*->addAttributeToFilter('is_saleable', 1, 'left')*/
                 ->addCategoryFilter($category)
                 ->addAttributeToSort('created_at','desc');
         } else {
@@ -66,7 +66,7 @@ class LatestList extends \Magento\Catalog\Block\Product\ListProduct {
                 ->addAttributeToSelect('thumbnail')
                 ->addAttributeToSelect($this->_catalogConfig->getProductAttributes())
                 ->addUrlRewrite()
-                ->addAttributeToFilter('is_saleable', 1, 'left')
+                /*->addAttributeToFilter('is_saleable', 1, 'left')*/
                 ->addAttributeToSort('created_at','desc');
         }
         
