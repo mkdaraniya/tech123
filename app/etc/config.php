@@ -228,6 +228,7 @@ return [
         'Mageplaza_AjaxLayer' => 1,
         'Mageplaza_LayeredNavigation' => 1,
         'Mageplaza_Search' => 1,
+        'Magepow_Categories' => 1,
         'Smartwave_Core' => 1,
         'Smartwave_Dailydeals' => 1,
         'Smartwave_Filterproducts' => 1,
@@ -236,6 +237,9 @@ return [
         'Smartwave_Socialfeeds' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
+        'WeSupply_Toolbox' => 1,
+        'WeltPixel_Backend' => 1,
+        'WeltPixel_Quickview' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];
