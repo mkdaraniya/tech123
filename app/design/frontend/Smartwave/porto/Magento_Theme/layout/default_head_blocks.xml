@@ -17,5 +17,7 @@
         <!-- <script src="jquery.js" />
         <script src="jquery-ui.js" />
         <script src="fancybox/js/jquery.fancybox.js" /> -->
+
+        <css src="css/my_portotheme_custom.css" />
     </head>
 </page>
