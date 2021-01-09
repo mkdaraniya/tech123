@@ -17,5 +17,10 @@
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <referenceBlock name="wishlist_sidebar" remove="true"/>
+
+        <!--start my code 9/1/2021-->
+        <referenceBlock name="category.image" remove="true"/>
+        <!--end my code 9/1/2021-->
+        
     </body>
 </page>
