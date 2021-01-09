@@ -4,10 +4,8 @@
 /*category page for sort by option display on center*/
 .magepow-categories-grid .magepow-categories-category-image img {
     margin: 0;
-    padding: 0;
-    border: none;
-    width: auto;
-    height: 151px;
+    width: 157px;
+    height: 157px;
     border: 1px solid #ddd;
     padding: 18px 18px 18px 18px;
 }
