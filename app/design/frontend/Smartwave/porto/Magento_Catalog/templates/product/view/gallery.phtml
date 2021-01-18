@@ -266,7 +266,10 @@ require([
         </div>
     </div>
 </div>
-<script type="text/x-magento-init">
+
+
+<!--18/1/2021 old Code-->
+<!--<script type="text/x-magento-init">
     {
         "[data-gallery-role=gallery-placeholder]": {
             "mage/gallery/gallery": {
@@ -305,7 +308,87 @@ require([
             }
         }
     }
-</script>
+</script>-->
+<!--18/1/2021 old Code-->
+
+
+
+<!--18/1/2021 START MY CODE-->
+<script type="text/x-magento-init">
+        {
+            "[data-gallery-role=gallery-placeholder]": {
+                "mage/gallery/gallery": {
+                    "mixins":["magnifier/magnify"],
+                    "magnifierOpts": <?= /* @escapeNotVerified */ $block->getMagnifier() ?>,
+                    "data": <?= /* @escapeNotVerified */ $block->getGalleryImagesJson() ?>,
+                    "options": {
+                        "nav": "<?= /* @escapeNotVerified */ $block->getVar("gallery/nav") ?>",
+                        <?php if (($block->getVar("gallery/loop"))): ?>
+                            "loop": <?= /* @escapeNotVerified */ $block->getVar("gallery/loop") ?>,
+                        <?php endif; ?>
+                        <?php if (($block->getVar("gallery/keyboard"))): ?>
+                            "keyboard": <?= /* @escapeNotVerified */ $block->getVar("gallery/keyboard") ?>,
+                        <?php endif; ?>
+                        <?php if (($block->getVar("gallery/arrows"))): ?>
+                            "arrows": <?= /* @escapeNotVerified */ $block->getVar("gallery/arrows") ?>,
+                        <?php endif; ?>
+                        <?php if (($block->getVar("gallery/allowfullscreen"))): ?>
+                            "allowfullscreen": <?= /* @escapeNotVerified */ $block->getVar("gallery/allowfullscreen") ?>,
+                        <?php endif; ?>
+                        <?php if (($block->getVar("gallery/caption"))): ?>
+                            "showCaption": <?= /* @escapeNotVerified */ $block->getVar("gallery/caption") ?>,
+                        <?php endif; ?>
+                        "width": "<?= /* @escapeNotVerified */ $block->getImageAttribute('product_page_image_medium', 'width') ?>",
+                        "thumbwidth": "<?= /* @escapeNotVerified */ $block->getImageAttribute('product_page_image_small', 'width') ?>",
+                        <?php if ($block->getImageAttribute('product_page_image_small', 'height') || $block->getImageAttribute('product_page_image_small', 'width')): ?>
+                            "thumbheight": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_small', 'height')
+                            ?: $block->getImageAttribute('product_page_image_small', 'width'); ?>,
+                        <?php endif; ?>
+                        <?php if ($block->getImageAttribute('product_page_image_medium', 'height') || $block->getImageAttribute('product_page_image_medium', 'width')): ?>
+                            "height": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_medium', 'height')
+                            ?: $block->getImageAttribute('product_page_image_medium', 'width'); ?>,
+                        <?php endif; ?>
+                        <?php if ($block->getVar("gallery/transition/duration")): ?>
+                            "transitionduration": <?= /* @escapeNotVerified */ $block->getVar("gallery/transition/duration") ?>,
+                        <?php endif; ?>
+                        "transition": "<?= /* @escapeNotVerified */ $block->getVar("gallery/transition/effect") ?>",
+                        <?php if (($block->getVar("gallery/navarrows"))): ?>
+                            "navarrows": <?= /* @escapeNotVerified */ $block->getVar("gallery/navarrows") ?>,
+                        <?php endif; ?>
+                        "navtype": "<?= /* @escapeNotVerified */ $block->getVar("gallery/navtype") ?>",
+                        "navdir": "<?= /* @escapeNotVerified */ $block->getVar("gallery/navdir") ?>"
+                    },
+                    "fullscreen": {
+                        "nav": "<?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/nav") ?>",
+                        <?php if ($block->getVar("gallery/fullscreen/loop")): ?>
+                            "loop": <?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/loop") ?>,
+                        <?php endif; ?>
+                        "navdir": "<?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/navdir") ?>",
+                        <?php if ($block->getVar("gallery/transition/navarrows")): ?>
+                            "navarrows": <?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/navarrows") ?>,
+                        <?php endif; ?>
+                        "navtype": "<?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/navtype") ?>",
+                        <?php if ($block->getVar("gallery/fullscreen/arrows")): ?>
+                            "arrows": <?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/arrows") ?>,
+                        <?php endif; ?>
+                        <?php if ($block->getVar("gallery/fullscreen/caption")): ?>
+                            "showCaption": <?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/caption") ?>,
+                        <?php endif; ?>
+                        <?php if ($block->getVar("gallery/fullscreen/transition/duration")): ?>
+                            "transitionduration": <?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/transition/duration") ?>,
+                        <?php endif; ?>
+                        "transition": "<?= /* @escapeNotVerified */ $block->getVar("gallery/fullscreen/transition/effect") ?>"
+                    },
+                    "breakpoints": <?= /* @escapeNotVerified */ $block->getBreakpoints() ?>
+                }
+            }
+        }
+    </script>
+	<!--18/1/2021 END MY CODE-->
+	
+	
+	
+	
 <script type="text/javascript">
 require([
     'jquery',
