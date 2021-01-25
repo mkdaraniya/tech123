@@ -14,12 +14,12 @@
     <?php if ($_product->isAvailable()): ?>
         <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
             <span class="label"><?php /* @escapeNotVerified */ echo __('Availability:') ?></span>
-            <span><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
+            <span style = "color:#00bc00;"><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
         </div>
     <?php else: ?>
         <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
         	<span class="label"><?php /* @escapeNotVerified */ echo __('Availability:') ?></span>
-            <span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
+            <span style = "color:red;"><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
         </div>
     <?php endif; ?>
 <?php endif; ?>
