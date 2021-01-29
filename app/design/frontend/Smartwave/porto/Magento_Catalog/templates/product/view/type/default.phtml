@@ -9,13 +9,27 @@
 ?>
 <?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */?>
 <?php $_product = $block->getProduct() ?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
+$stock = $StockState->getStockQty($_product->getId(), $_product->getStore()->getWebsiteId());
+
+?>
 
 <?php if ($block->displayProductStockStatus()): ?>
     <?php if ($_product->isAvailable()): ?>
-        <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
-            <span class="label"><?php /* @escapeNotVerified */ echo __('Availability:') ?></span>
-            <span style = "color:#00bc00;"><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
-        </div>
+        <?php if($stock < 5) :?>
+            <div class="availability only" title="<?= /* @escapeNotVerified */ __('Nur noch %1 St verfügbar!', ($stock)) ?>">
+                <span class="label"><?php /* @escapeNotVerified */ echo __('Verfügbarkeit: :') ?></span>
+                <span style = "color:#e74c3c;"><?= /* @escapeNotVerified */ __('ur noch %1 St verfügbar!', "{$stock}") ?></span>
+            </div>
+        <?php else:?>
+            <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+                <span class="label"><?php /* @escapeNotVerified */ echo __('Availability:') ?></span>
+                <span style = "color:#00bc00;"><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
+            </div>
+        <?php endif;?>
+
     <?php else: ?>
         <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
         	<span class="label"><?php /* @escapeNotVerified */ echo __('Availability:') ?></span>
