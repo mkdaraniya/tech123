@@ -13,7 +13,6 @@
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
 $stock = $StockState->getStockQty($_product->getId(), $_product->getStore()->getWebsiteId());
-
 ?>
 
 <?php if ($block->displayProductStockStatus()): ?>
@@ -37,3 +36,4 @@ $stock = $StockState->getStockQty($_product->getId(), $_product->getStore()->get
         </div>
     <?php endif; ?>
 <?php endif; ?>
+
