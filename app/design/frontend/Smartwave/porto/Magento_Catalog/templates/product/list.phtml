@@ -108,7 +108,7 @@ $_lazyload = $_portohelper->getConfig('porto_settings/optimization/lazyload');
                                     if((is_null($specialfromdate) && is_null($specialtodate)) || ($today >= strtotime($specialfromdate) && is_null($specialtodate)) || ($today <= strtotime($specialtodate) && is_null($specialfromdate)) || ($today >= strtotime($specialfromdate) && $today <= strtotime($specialtodate))){
                                         if($_product_label_config['sale_label_percent']) {
                                             $save_percent = 100-round(($specialprice/$orgprice)*100);
-                                            $product_label .= '<div class="product-label sale-label">'.'-'.$save_percent.'%'.'</div>';
+                                            $product_label .= '<div class="product-label sale-label">Sale</div>';
                                         } else {
                                             $product_label .= '<div class="product-label sale-label">'.$_product_label_config['sale_label_text'].'</div>';
                                         }
@@ -122,7 +122,7 @@ $_lazyload = $_portohelper->getConfig('porto_settings/optimization/lazyload');
                                 
                                 if ($newsTo != '' || $newsFrom != ''){
                                     if (($newsTo != '' && $newsFrom != '' && $now>=$newsFrom && $now<=$newsTo) || ($newsTo == '' && $now >=$newsFrom) || ($newsFrom == '' && $now<=$newsTo)) {
-                                        $product_label .= '<div class="product-label new-label">'.$_product_label_config['new_label_text'].'</div>';
+                                        $product_label .= '<div class="product-label new-label">New</div>';
                                     }
                                 }
                             }
