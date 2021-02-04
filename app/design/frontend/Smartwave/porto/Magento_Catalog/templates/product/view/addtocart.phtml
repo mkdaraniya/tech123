@@ -93,12 +93,47 @@
         </div>
     </div>
 <?php endif; ?>
+
+<?php if ($_additional = $block->getAdditionalData()): ?>
+    <div class="additional-attributes-wrapper table-wrapper">
+        <table class="data table additional-attributes" id="product-attribute-specs-table">
+            <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('More Information') ?></caption>
+            <tbody>
+            <?php foreach ($_additional as $_data): ?>
+                <?php if($_data['value'] == 'N/A') continue;?>
+                <tr>
+                    <th class="col label" scope="row"><?php echo $block->escapeHtml(__($_data['label'])) ?></th>
+                    <td class="col data" data-th="<?php echo $block->escapeHtml(__($_data['label'])) ?>"><?php /* @escapeNotVerified */ echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+<?php else:?>
+    No Data Found
+<?php endif;?>
+
 <hr style="border-color: #ebebeb"/>
 <p>
-    <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/>
-    <span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/>
-    <span>tech123-Artikelnummer: <?php echo $_product->getData("tech123_Artikelnummer"); ?></span><br/>
-    <span>EAN-Nummer: <?php echo $_product->getData("ean_nummer"); ?></span><br/>
+    <?php
+    $manufacturer = $_product->getAttributeText("manufacturer");
+    $teg_prodnumber = $_product->getData("teg_prodnumber");
+    $artikelnummer = $_product->getData("tech123_Artikelnummer");
+    $ean_number = $_product->getData("ean_nummer");
+
+    if ($manufacturer !== "") {
+        ?> <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/><?php
+    }
+    if ($teg_prodnumber !== "") {
+        ?><span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/><?php
+    }
+    if ($artikelnummer !== "") {
+        ?><span>tech123-Artikelnummer: <?php echo $_product->getData("tech123_Artikelnummer"); ?></span><br/><?php
+    }
+    if ($ean_number !== "") {
+        ?><span>EAN-Nummer: <?php echo $_product->getData("ean_nummer"); ?></span><br/><?php
+    }
+    ?>
 </p>
 <?php if ($block->isRedirectToCartEnabled()) : ?>
     <script type="text/x-magento-init">
@@ -109,6 +144,8 @@
             }
         }
     }
+
+
 
     </script>
 <?php else : ?>
