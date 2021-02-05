@@ -9,10 +9,7 @@
 /** @var $block \Magento\Catalog\Block\Product\View */
 ?>
 <?php $_product = $block->getProduct(); ?>
-<?php
-$buttonTitle = __('Add to Cart');
-$_helper = $this->helper('Magento\Catalog\Helper\Output');
-?>
+<?php $buttonTitle = __('Add to Cart'); ?>
 <?php $dailydealhelper = $this->helper('Smartwave\Dailydeals\Helper\Data'); ?>
 <?php if ($_product->isSaleable()): ?>
     <div class="box-tocart">
@@ -97,34 +94,11 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     </div>
 <?php endif; ?>
 
-<?php if ($_additional = $block->getAdditionalData()): ?>
-    <div class="additional-attributes-wrapper table-wrapper">
-        <table class="data table additional-attributes" id="product-attribute-specs-table">
-            <caption class="table-caption"><?php /* @escapeNotVerified */
-                echo __('More Information') ?></caption>
-            <tbody>
-            <?php foreach ($_additional as $_data): ?>
-                <?php if ($_data['value'] == 'N/A') continue; ?>
-                <tr>
-                    <th class="col label" scope="row"><?php echo $block->escapeHtml(__($_data['label'])) ?></th>
-                    <td class="col data"
-                        data-th="<?php echo $block->escapeHtml(__($_data['label'])) ?>"><?php /* @escapeNotVerified */
-                        echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-<?php else: ?>
-    No Data Found
-<?php endif; ?>
-
-<hr style="border-color: #ebebeb"/>
 <p>
     <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/>
     <span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/>
     <span>tech123-Artikelnummer: <?php echo $_product->getData("tech123_Artikelnummer"); ?></span><br/>
-    <span>EAN-Nummer: <?php echo $_product->getData("ean_nummer"); ?></span><br/>
+    <span>EAN-Nummer: <?php echo $_product->getData("eancode"); ?></span><br/>
 </p>
 <?php if ($block->isRedirectToCartEnabled()) : ?>
     <script type="text/x-magento-init">
@@ -135,10 +109,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
             }
         }
     }
-
-
-
-
     </script>
 <?php else : ?>
     <script>
