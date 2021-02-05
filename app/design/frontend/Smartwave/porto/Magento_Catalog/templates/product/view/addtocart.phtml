@@ -94,16 +94,16 @@
     </div>
 <?php endif; ?>
 <p>
-<?php if($_product->getAttributeText("manufacturer") != ''):?>
-    <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/>
-
-    <?php if($_product->getData("teg_prodnumber") != ''):?>
+    <?php if ($_product->getAttributeText("manufacturer") != ''): ?>
+        <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/>
+    <?php endif; ?>
+    <?php if ($_product->getData("teg_prodnumber") != ''): ?>
         <span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/>
-    <?php endif;?>
+    <?php endif; ?>
 
-    <?php if($_product->getData("eancode") != ''):?>
+    <?php if ($_product->getData("eancode") != ''): ?>
         <span>EAN-Nummer: <?php echo $_product->getData("eancode"); ?></span><br/>
-    <?php endif;?>
+    <?php endif; ?>
 
 </p>
 <?php if ($block->isRedirectToCartEnabled()) : ?>
@@ -115,6 +115,7 @@
             }
         }
     }
+
     </script>
 <?php else : ?>
     <script>
