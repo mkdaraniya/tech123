@@ -93,12 +93,18 @@
         </div>
     </div>
 <?php endif; ?>
-
 <p>
+<?php if($_product->getAttributeText("manufacturer") != ''):?>
     <span>Hersteller: <?php echo $_product->getAttributeText("manufacturer"); ?> </span> <br/>
-    <span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/>
-    <span>tech123-Artikelnummer: <?php echo $_product->getData("tech123_Artikelnummer"); ?></span><br/>
-    <span>EAN-Nummer: <?php echo $_product->getData("eancode"); ?></span><br/>
+
+    <?php if($_product->getData("teg_prodnumber") != ''):?>
+        <span>Hersteller-Artikelnummer: <?php echo $_product->getData("teg_prodnumber"); ?></span><br/>
+    <?php endif;?>
+
+    <?php if($_product->getData("eancode") != ''):?>
+        <span>EAN-Nummer: <?php echo $_product->getData("eancode"); ?></span><br/>
+    <?php endif;?>
+
 </p>
 <?php if ($block->isRedirectToCartEnabled()) : ?>
     <script type="text/x-magento-init">
