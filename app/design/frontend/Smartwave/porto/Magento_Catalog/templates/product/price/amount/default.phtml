@@ -10,6 +10,12 @@
     .old-price span.price-tax-comment {
         display: none;
     }
+    .price-box.price-final_price :not(.special-price) {
+        margin-bottom: 0 !important;
+    }
+    .price-box.price-final_price {
+        margin-top: 21px !important;
+    }
 </style>
 <span class="price-container <?= $block->escapeHtmlAttr($block->getAdjustmentCssClasses()) ?>"
         <?= $block->getSchema() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '' ?>>
@@ -22,7 +28,7 @@
         data-price-type="<?= $block->escapeHtmlAttr($block->getPriceType()) ?>"
         class="price-wrapper <?= $block->escapeHtmlAttr($block->getPriceWrapperCss()) ?>"
     ><?= $block->escapeHtml($block->formatCurrency($block->getDisplayValue(), (bool)$block->getIncludeContainer()), ['span']) ?></span>
-
+<span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>
     <?php if ($block->hasAdjustmentsHtml()) : ?>
         <?= $block->getAdjustmentsHtml() ?>
     <?php endif; ?>
@@ -31,4 +37,4 @@
         <meta itemprop="priceCurrency" content="<?= $block->escapeHtmlAttr($block->getDisplayCurrencyCode()) ?>"/>
     <?php endif; ?>
 </span>
-<span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>
+
