@@ -7,17 +7,7 @@
 
 <?php /** @var $block \Magento\Framework\Pricing\Render\Amount */ ?>
 <style>
-    .old-price span.price-tax-comment {
-        display: none;
-    }
-    .products-grid .special-price {
-        width: 66%;
-    }
 
-    .products-grid .old-price {
-        width: 15%;
-        float: left;
-    }
 </style>
 <span class="price-container <?= $block->escapeHtmlAttr($block->getAdjustmentCssClasses()) ?>"
         <?= $block->getSchema() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '' ?>>

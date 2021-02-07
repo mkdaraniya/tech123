@@ -2186,3 +2186,13 @@ hr.solid {
 .products-grid.small-list {
     margin: 0;
 }
+.old-price span.price-tax-comment {
+    display: none;
+}
+.products-grid .special-price {
+    width: 66%;
+}
+.products-grid .old-price {
+    width: 15%;
+    float: left;
+}
