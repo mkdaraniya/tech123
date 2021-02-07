@@ -2191,11 +2191,11 @@ hr.solid {
 }
 .products-grid .product-item-details .product-item-actions .actions-secondary.towishlist{
     opacity: 1 !important;
-    right: 0 !important;
+    right: 6px !important;
     visibility: visible !important;
 }
 .products-grid .product-item-details .product-item-actions .actions-secondary.tocompare {
-    left: 0 !important;
+    left: 6px !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
