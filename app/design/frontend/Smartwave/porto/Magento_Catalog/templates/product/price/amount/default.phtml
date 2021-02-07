@@ -34,8 +34,8 @@
         data-price-amount="<?= $block->escapeHtmlAttr($block->getDisplayValue()) ?>"
         data-price-type="<?= $block->escapeHtmlAttr($block->getPriceType()) ?>"
         class="price-wrapper <?= $block->escapeHtmlAttr($block->getPriceWrapperCss()) ?>"
-    ><?= $block->escapeHtml($block->formatCurrency($block->getDisplayValue(), (bool)$block->getIncludeContainer()), ['span']) ?></span>
-<span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>
+    ><?= $block->escapeHtml($block->formatCurrency($block->getDisplayValue(), (bool)$block->getIncludeContainer()), ['span']) ?><span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span></span>
+
     <?php if ($block->hasAdjustmentsHtml()) : ?>
         <?= $block->getAdjustmentsHtml() ?>
     <?php endif; ?>
