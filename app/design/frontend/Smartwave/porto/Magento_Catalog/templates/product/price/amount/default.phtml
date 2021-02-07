@@ -10,6 +10,13 @@
     .old-price span.price-tax-comment {
         display: none;
     }
+    .products-grid .special-price {
+        width: 74%;
+    }
+    .products-grid .old-price {
+        width: 7%;
+        float: left;
+    }
 </style>
 <span class="price-container <?= $block->escapeHtmlAttr($block->getAdjustmentCssClasses()) ?>"
         <?= $block->getSchema() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '' ?>>
