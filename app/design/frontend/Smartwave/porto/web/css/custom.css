@@ -1,5 +1,5 @@
 .products-grid .product-item .product-item-details .product-item-name {
-    white-space: normal;
+    white-space: normal !important;
 }
 .action.compare.no-display {
     display: none !important;
