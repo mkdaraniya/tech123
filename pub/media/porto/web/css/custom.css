@@ -2199,3 +2199,13 @@ hr.solid {
     visibility: visible !important;
     opacity: 1 !important;
 }
+.products-grid .price-box.price-final_price {
+    height: 43px;
+    padding-top: 16px;
+}
+.price-box.price-final_price :not(.old-price) {
+    margin-top: -24px;
+}
+.price-box.price-final_price :not(.special-price) {
+    margin-top: -24px !important;
+}
