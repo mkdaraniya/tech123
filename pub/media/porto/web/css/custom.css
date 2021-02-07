@@ -2189,4 +2189,7 @@ hr.solid {
 .old-price span.price-tax-comment {
     display: none;
 }
-
+.products-grid .product-item-details .product-item-actions .actions-secondary.towishlist{
+    opacity: 1 !important;
+    right: 0 !important;
+}
