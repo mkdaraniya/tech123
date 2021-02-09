@@ -229,6 +229,7 @@ return [
         'Mageplaza_LayeredNavigation' => 1,
         'Mageplaza_Search' => 1,
         'Magepow_Categories' => 1,
+        'RSCoder_DuplicateEntry' => 1,
         'Smartwave_Core' => 1,
         'Smartwave_Dailydeals' => 1,
         'Smartwave_Filterproducts' => 1,
