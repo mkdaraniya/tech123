@@ -34,6 +34,10 @@
         width: 15%;
         float: left;
     }*/
+	.special-price {
+    display: block;
+    vertical-align: middle;
+}
 </style>
 <span class="price-container <?= $block->escapeHtmlAttr($block->getAdjustmentCssClasses()) ?>"
         <?= $block->getSchema() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '' ?>>
@@ -46,12 +50,13 @@
         data-price-type="<?= $block->escapeHtmlAttr($block->getPriceType()) ?>"
         class="price-wrapper <?= $block->escapeHtmlAttr($block->getPriceWrapperCss()) ?>"
     ><?= $block->escapeHtml($block->formatCurrency($block->getDisplayValue(), (bool)$block->getIncludeContainer()), ['span']) ?></span>
-    <span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>
+    <!--<span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>-->
     <?php if ($block->hasAdjustmentsHtml()) : ?>
         <?= $block->getAdjustmentsHtml() ?>
     <?php endif; ?>
     <?php if ($block->getSchema()) : ?>
         <meta itemprop="price" content="<?= $block->escapeHtmlAttr($block->getDisplayValue()) ?>"/>
+		<span style="color:red" class="price-tax-comment">. - incl. 20% MWSt</span>
         <meta itemprop="priceCurrency" content="<?= $block->escapeHtmlAttr($block->getDisplayCurrencyCode()) ?>"/>
     <?php endif; ?>
 </span>
