@@ -2223,6 +2223,7 @@ hr.solid {
 	margin-bottom: 0;
 }
 .page-header.type1 .sidebar-other{
+	position: absolute;
 	width: 23%;
 	margin-top:-41px;
 }
