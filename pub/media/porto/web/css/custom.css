@@ -2257,3 +2257,6 @@ hr.solid {
 .sw-megamenu.navigation.side-megamenu li.level0 > a{
 	font-size: 12px;
 }
+.cms-index-index .sw-megamenu.navigation.side-megamenu li.horizontal{
+	display: none;
+}
