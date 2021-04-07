@@ -2251,3 +2251,9 @@ hr.solid {
 	width: 23%;
 	visibility: hidden;
 }
+.page-header.type1 .navigation .sidebar-other .home-side-menu li.horizontal{
+	display: none;
+}
+.sw-megamenu.navigation.side-megamenu li.level0 > a{
+	font-size: 12px;
+}
