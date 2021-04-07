@@ -2236,7 +2236,10 @@ hr.solid {
 .sidebar-other .home-side-menu{
 	display: none;
 }
-.sidebar-other .side-menu-title{color: #ee6e25;}
+.sidebar-other .side-menu-title{color: #ee6e25;background: #f0f0ed; border-bottom:0px;}
+.sidebar-other .side-menu-title:after{content: '\f823';display: inline-block;font-family: 'porto-icons';
+   padding-right: 20px;font-size: 18px;
+    float: right;}
 .page-header.type1 .sw-megamenu .sidebar-other:hover .home-side-menu{
 	display: block;
 }
