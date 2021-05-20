@@ -2209,3 +2209,54 @@ hr.solid {
 .price-box.price-final_price :not(.special-price) {
     margin-top: -24px !important;
 }
+
+
+/*-----------------Custom style-------------------*/
+
+.page-header .nav-sections .sw-megamenu.navigation li.level0.fullwidth{
+	display: none;
+}
+.cms-index-index .page-header.type1 .navigation.sw-megamenu.side-megamenu{
+	display: none;
+}
+.page-header.type1 .nav-sections{
+	margin-bottom: 0;
+}
+.page-header.type1 .sidebar-other{
+	position: absolute;
+	width: 23%;
+	margin-top:-41px;
+}
+
+
+.page-header.type1 .navigation.sw-megamenu.side-megamenu{
+	z-index: 100;
+
+}
+.sidebar-other .home-side-menu{
+	display: none;
+}
+.sidebar-other .side-menu-title{color: #ee6e25;background: #f0f0ed; border-bottom:0px;}
+.sidebar-other .side-menu-title:after{content: '\f823';display: inline-block;font-family: 'porto-icons';
+   padding-right: 20px;font-size: 18px;
+    float: right;}
+.page-header.type1 .sw-megamenu .sidebar-other:hover .home-side-menu{
+	display: block;
+}
+.catalog-category-view html, body{
+	overflow-x: visible;	
+}
+
+.page-header.type1 .nav-sections .navigation ul>li:first-child{
+	width: 23%;
+	visibility: hidden;
+}
+.page-header.type1 .navigation .sidebar-other .home-side-menu li.horizontal{
+	display: none;
+}
+.sw-megamenu.navigation.side-megamenu li.level0 > a{
+	font-size: 12px;
+}
+.cms-index-index .sw-megamenu.navigation.side-megamenu li.horizontal{
+	display: none;
+}

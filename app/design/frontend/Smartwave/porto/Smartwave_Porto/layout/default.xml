@@ -26,6 +26,10 @@
                 <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
                 <block class="Smartwave\Porto\Block\Template" name="custom_block" template="html/header_custom_block.phtml" ifconfig="porto_settings/header/static_block" after="-"/>
             <block class="Smartwave\Porto\Block\Template" name="porto_custom_notice" template="html/custom_notice.phtml" after="-"/>
+
+
+            <block class="Smartwave\Megamenu\Block\Topmenu" name="sw.sidenav1" template="Smartwave_Megamenu::sidemenu-other.phtml" after="-"/>
+
             </block>
         </referenceContainer>
         <move element="navigation.sections" destination="porto_header"/>
