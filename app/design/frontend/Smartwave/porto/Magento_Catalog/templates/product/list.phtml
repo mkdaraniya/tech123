@@ -510,3 +510,33 @@ $_lazyload = $_portohelper->getConfig('porto_settings/optimization/lazyload');
 <?php
     echo $block->getChildHtml('filter_toggle');
 ?>
+
+<style>
+.page-header.type1 .navigation.sw-megamenu.side-megamenu {
+    z-index: 100;
+    position: absolute;
+    top: 183px;
+    left: 105px;
+    width: 100%;
+}
+.sw-megamenu.navigation .subchildmenu.mega-columns.columns4 > li {
+    width: 50%;
+}
+.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
+    padding: 5px;
+    line-height: 1;
+    font-size: 14px;
+}
+.sw-megamenu.navigation.side-megamenu li.level0.fullwidth > .submenu {
+    width: 918px;
+}
+
+.sw-megamenu.navigation .subchildmenu.mega-columns.columns4 > li {
+    width: 50%;
+}
+
+.price-box.price-final_price :not(.special-price) {
+    margin-top: -46px !important;
+}
+</style>
+
