@@ -2207,7 +2207,7 @@ hr.solid {
     margin-top: -24px;
 }
 .price-box.price-final_price :not(.special-price) {
-    margin-top: -24px !important;
+    margin-top: -72px !important;
 }
 
 
