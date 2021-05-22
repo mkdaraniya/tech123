@@ -37,3 +37,22 @@ $bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
 /** @var \Magento\Framework\App\Http $app */
 $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
 $bootstrap->run($app);
+?>
+<style>
+.logo img {
+    max-height: inherit;
+    width: auto;
+    height: auto;
+}
+.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
+    padding: 5px;
+    line-height: 1;
+    font-size: 14px;
+}
+.sw-megamenu.navigation .subchildmenu.mega-columns.columns4 > li {
+    width: 50%;
+}
+.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
+    font-size: 14px;
+}
+</style>
