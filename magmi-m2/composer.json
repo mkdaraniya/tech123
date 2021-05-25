@@ -1,0 +1,17 @@
+{
+    "name": "tagesjump/magmi2",
+    "description": "Magmi for Magento 2.0",
+    "license": "MIT License",
+    "homepage": "http://tagesjump.ru",
+    "authors":[
+        {
+            "name":"Sebastien Bracquemont"
+        },
+        {
+            "name":"Tagesjump"
+        }
+    ],
+    "bin": [
+        "magmi/cli/magmi.cli.php"
+    ]
+}
