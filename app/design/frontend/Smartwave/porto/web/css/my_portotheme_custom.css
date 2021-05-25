@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*category page for sort by option display on center*/
 .toolbar-products { background-color: transparent; position: relative; border-top: 1px solid #ddd; padding: 10px 0 10px 0; border-bottom: 1px solid #ddd; bottom: 3px;}
 .toolbar-sorter.sorter { position: absolute; left: 36%; }
@@ -35,57 +34,4 @@ table>thead>tr>th, table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, tabl
 
 
 
-=======
-/*category page for sort by option display on center*/
-.toolbar-products { background-color: transparent; position: relative; border-top: 1px solid #ddd; padding: 10px 0 10px 0; border-bottom: 1px solid #ddd; bottom: 3px;}
-.toolbar-sorter.sorter { position: absolute; left: 36%; }
-/*category page for sort by option display on center*/
-.magepow-categories-grid .magepow-categories-category-image img {
-    margin: 0;
-    width: 157px;
-    height: 157px;
-    border: 1px solid #ddd;
-    padding: 18px 18px 18px 18px;
-}
 
-.product.info.detailed .additional-attributes>thead>tr>th, .product.info.detailed .additional-attributes>tbody>tr>th, .product.info.detailed .additional-attributes>tfoot>tr>th {
-    padding: 8.5px 34px 12px 30px;
-    border: 1px solid #e9e9e9;
-}
-.product.info.detailed .additional-attributes>thead>tr>td, .product.info.detailed .additional-attributes>tbody>tr>td, .product.info.detailed .additional-attributes>tfoot>tr>td {
-    padding: 8.5px 34px 12px 30px;
-    border: 1px solid #e9e9e9;
-}
-table#product-attribute-specs-table {
-    width: 100%;
-}
-table>thead>tr>th, table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, table>tbody>tr>td, table>tfoot>tr>td {
-    padding: 8.5px 34px 12px 30px;
-    border: 1px solid #e9e9e9;
-}
-.product.info.detailed .additional-attributes>thead>tr>td, .product.info.detailed .additional-attributes>tbody>tr>td, .product.info.detailed .additional-attributes>tfoot>tr>td {
-    padding: -0.5px 34px 12px 30px;
-    border: 1px solid #e9e9e9;
-}
-
-
-
-
-
-.logo img {
-    max-height: inherit;
-    width: auto;
-    height: auto;
-}
-.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
-    padding: 5px;
-    line-height: 1;
-    font-size: 14px;
-}
-.sw-megamenu.navigation .subchildmenu.mega-columns.columns4 > li {
-    width: 50%;
-}
-.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
-    font-size: 14px;
-}
->>>>>>> d8e3dad92f98a294406768217187206125ad31cd
