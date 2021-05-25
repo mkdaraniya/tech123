@@ -224,6 +224,7 @@ return [
         'Klarna_Kp' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
+        'Mageplaza_Core' => 1,
         'Magepow_Categories' => 1,
         'RSCoder_DuplicateEntry' => 1,
         'Smartwave_Core' => 1,
