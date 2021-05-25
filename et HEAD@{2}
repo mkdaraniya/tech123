@@ -1,0 +1,108 @@
+[33maa774bbd[m[33m ([m[1;36mHEAD -> [m[1;32mproduction[m[33m, [m[1;31morigin/production[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33maa774bbd[m[33m ([m[1;36mHEAD -> [m[1;32mproduction[m[33m, [m[1;31morigin/production[m[33m)[m HEAD@{1}: reset: moving to HEAD@{1}
+[33m07d331a7[m HEAD@{2}: reset: moving to HEAD@{1}
+[33maa774bbd[m[33m ([m[1;36mHEAD -> [m[1;32mproduction[m[33m, [m[1;31morigin/production[m[33m)[m HEAD@{3}: commit: production
+[33m07d331a7[m HEAD@{4}: commit: production
+[33m3db22bd0[m HEAD@{5}: commit (merge): production
+[33m76f96c3a[m HEAD@{6}: reset: moving to HEAD
+[33m76f96c3a[m HEAD@{7}: reset: moving to production
+[33m76f96c3a[m HEAD@{8}: reset: moving to production
+[33m76f96c3a[m HEAD@{9}: revert: Revert "production"
+[33m2a938261[m HEAD@{10}: reset: moving to origin/production
+[33m2a938261[m HEAD@{11}: reset: moving to production
+[33m2a938261[m HEAD@{12}: reset: moving to production
+[33m2a938261[m HEAD@{13}: reset: moving to HEAD
+[33m2a938261[m HEAD@{14}: commit: production
+[33m9b6899eb[m HEAD@{15}: checkout: moving from production to production
+[33m9b6899eb[m HEAD@{16}: reset: moving to HEAD
+[33m9b6899eb[m HEAD@{17}: commit (merge): production
+[33ma7d668cc[m HEAD@{18}: reset: moving to HEAD
+[33ma7d668cc[m HEAD@{19}: reset: moving to HEAD
+[33ma7d668cc[m HEAD@{20}: reset: moving to HEAD
+[33ma7d668cc[m HEAD@{21}: reset: moving to HEAD
+[33ma7d668cc[m HEAD@{22}: commit: production
+[33m2b952ad2[m HEAD@{23}: commit: production
+[33m491fc846[m HEAD@{24}: commit: Production branch along with menu
+[33m81835eb8[m HEAD@{25}: checkout: moving from 81835eb8b063a0834406227fe0edaeeafd73f6e1 to production
+[33m81835eb8[m HEAD@{26}: checkout: moving from menu to 81835eb8b063a0834406227fe0edaeeafd73f6e1
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{27}: checkout: moving from 4a40908b70cca62a44893797145b1c03c78da0f9 to menu
+[33m4a40908b[m HEAD@{28}: merge menu: Merge made by the 'recursive' strategy.
+[33maf86d0f1[m HEAD@{29}: checkout: moving from master to af86d0f11dd85702fa2eab3f8192bebf3f488032
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{30}: checkout: moving from master-clone to master
+[33md3dad26d[m[33m ([m[1;32mmaster-clone[m[33m)[m HEAD@{31}: commit: master-clone
+[33m82729740[m HEAD@{32}: merge menu: Merge made by the 'recursive' strategy.
+[33m571a2d76[m HEAD@{33}: commit: master-clone
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{34}: checkout: moving from master to master-clone
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{35}: checkout: moving from menu to master
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{36}: reset: moving to HEAD
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{37}: reset: moving to HEAD
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{38}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{39}: checkout: moving from menu to master
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{40}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{41}: reset: moving to HEAD
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{42}: reset: moving to HEAD
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{43}: checkout: moving from master to master
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{44}: checkout: moving from master to master
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{45}: checkout: moving from menu to master
+[33m469ff955[m[33m ([m[1;32mmenu[m[33m)[m HEAD@{46}: merge master: Merge made by the 'recursive' strategy.
+[33m2e897bf3[m HEAD@{47}: commit: master
+[33mc1f58957[m HEAD@{48}: pull origin master: Fast-forward
+[33m81835eb8[m HEAD@{49}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{50}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{51}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{52}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{53}: checkout: moving from menu to menu
+[33m81835eb8[m HEAD@{54}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{55}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{56}: reset: moving to 81835eb8
+[33m5d30969f[m[33m ([m[1;31morigin/menu[m[33m)[m HEAD@{57}: pull origin menu: Fast-forward
+[33m81835eb8[m HEAD@{58}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{59}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{60}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{61}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{62}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{63}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{64}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{65}: checkout: moving from master to master
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{66}: checkout: moving from menu to master
+[33m81835eb8[m HEAD@{67}: reset: moving to 81835eb8
+[33m61bff697[m HEAD@{68}: checkout: moving from master to menu
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{69}: rebase: updating HEAD
+[33mc1f58957[m HEAD@{70}: pull --rebase: checkout c1f58957b8d78e669737d9f420be34b0c1a6af1d
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{71}: reset: moving to HEAD
+[33m31389f4d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{72}: commit (merge): fix conflicts
+[33me2fd84bd[m HEAD@{73}: commit: add sidemenu-other html
+[33m88130420[m HEAD@{74}: reset: moving to HEAD~
+[33m52960ed6[m HEAD@{75}: commit (merge): update master
+[33m88130420[m HEAD@{76}: reset: moving to 88130420
+[33m61bff697[m HEAD@{77}: reset: moving to HEAD
+[33m61bff697[m HEAD@{78}: commit: master
+[33m81835eb8[m HEAD@{79}: reset: moving to HEAD
+[33m88130420[m HEAD@{80}: reset: moving to HEAD
+[33m88130420[m HEAD@{81}: reset: moving to HEAD
+[33m88130420[m HEAD@{82}: commit: master
+[33m3ff05daa[m HEAD@{83}: reset: moving to HEAD
+[33m3ff05daa[m HEAD@{84}: reset: moving to HEAD
+[33m3ff05daa[m HEAD@{85}: pull origin master: Merge made by the 'recursive' strategy.
+[33m38bd73b2[m HEAD@{86}: reset: moving to HEAD
+[33m38bd73b2[m HEAD@{87}: reset: moving to HEAD
+[33m38bd73b2[m HEAD@{88}: reset: moving to HEAD
+[33m38bd73b2[m HEAD@{89}: reset: moving to HEAD
+[33m81835eb8[m HEAD@{90}: pull origin menu: Fast-forward
+[33md8c3713b[m HEAD@{91}: pull origin menu: Fast-forward
+[33mcc154244[m HEAD@{92}: pull origin menu: Fast-forward
+[33m05cde5fd[m HEAD@{93}: pull origin menu: Fast-forward
+[33m1b30d893[m HEAD@{94}: pull origin menu: Fast-forward
+[33m38bd73b2[m HEAD@{95}: checkout: moving from menu to master
+[33mffc73790[m HEAD@{96}: checkout: moving from master to menu
+[33m38bd73b2[m HEAD@{97}: checkout: moving from master to master
+[33mffc73790[m HEAD@{98}: pull origin menu: Fast-forward
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{99}: reset: moving to d9bfdd0a
+[33m38bd73b2[m HEAD@{100}: checkout: moving from master to menu
+[33m38bd73b2[m HEAD@{101}: commit: commit
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{102}: checkout: moving from theme_demo to master
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{103}: checkout: moving from theme_demo to theme_demo
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{104}: checkout: moving from theme_demo to theme_demo
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{105}: checkout: moving from master to theme_demo
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{106}: checkout: moving from master to master
+[33md9bfdd0a[m[33m ([m[1;32mtheme_demo[m[33m)[m HEAD@{107}: pull origin master: Fast-forward
