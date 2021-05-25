@@ -29,3 +29,24 @@ table>thead>tr>th, table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, tabl
     padding: -0.5px 34px 12px 30px;
     border: 1px solid #e9e9e9;
 }
+
+
+
+
+
+.logo img {
+    max-height: inherit;
+    width: auto;
+    height: auto;
+}
+.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
+    padding: 5px;
+    line-height: 1;
+    font-size: 14px;
+}
+.sw-megamenu.navigation .subchildmenu.mega-columns.columns4 > li {
+    width: 50%;
+}
+.sw-megamenu.navigation li.level0.fullwidth .submenu a, .sw-megamenu.navigation li.level0.staticwidth .submenu a {
+    font-size: 14px;
+}
